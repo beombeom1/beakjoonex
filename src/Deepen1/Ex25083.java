@@ -9,4 +9,4 @@ public class Ex25083 {
         System.out.println("      |");
         System.out.println("      |");
     }
-}
+}//문제번호실수
