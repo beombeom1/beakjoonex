@@ -11,6 +11,7 @@ public class Ex1978 {
         int n = Integer.parseInt(s);
         String[] ss = br.readLine().split(" ");
         int r = 0;
+
         for(int i = 0; i < n; i++){
             int nn = Integer.parseInt(ss[i]);
             if(nn == 1){
