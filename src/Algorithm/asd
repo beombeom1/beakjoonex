@@ -1,24 +1,26 @@
-public class Main {
-  static int[] MakeArray(){
+#include
+#include
 
-  int[] tempArr = new int[4];
+int main(){
+    char*p = "It is 8";
+    char result[100];
+    int i;
 
-  for(int i=0; i<tempArr.Length;i++){
-    tempArr[i] = i;
-  }
+    for(i=0; p[i]!=''; i++){
+        if(isupper(p[i]))
+            result[i] = (p[i]-'A'+5)% 26 + 'A';
+        else if(islower(p[i]))
+            result[i] = (p[i]-'a'+10)% 26 + 'a';
+        else if(isdigit(p[i]))
+            result[i] = (p[i]-'0'+3)% 10 + '0';
+        else if(!(isupper(p[i]) || islower(p[i]) || isdigit(p[i])))
+            result[i] = p[i];
+    }
 
-  return tempArr;
-  }
+    result[i] = '';
+    printf("%sn",result);
 
-  public static void main(String[] args){
-
-  int[] intArr;
-  intArr = MakeArray();
-
-  for(int i=0; i < intArr.Length; i++)
-  System.out.print(intArr[i]);
-
-  }
+    return 0;
 }
 
-0 1 2 3
+Nd sc 8
